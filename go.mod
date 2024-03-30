@@ -1,4 +1,4 @@
-module github.com/disintegration/imaging
+module github.com/cognusion/imaging
 
 go 1.19
 
