@@ -1,22 +1,24 @@
 # Imaging
 
-[![PkgGoDev](https://pkg.go.dev/badge/github.com/disintegration/imaging)](https://pkg.go.dev/github.com/disintegration/imaging)
-[![Build Status](https://travis-ci.org/disintegration/imaging.svg?branch=master)](https://travis-ci.org/disintegration/imaging)
-[![Coverage Status](https://coveralls.io/repos/github/disintegration/imaging/badge.svg?branch=master&service=github)](https://coveralls.io/github/disintegration/imaging?branch=master)
-[![Go Report Card](https://goreportcard.com/badge/github.com/disintegration/imaging)](https://goreportcard.com/report/github.com/disintegration/imaging)
+[![PkgGoDev](https://pkg.go.dev/badge/github.com/cognusion/imaging)](https://pkg.go.dev/github.com/cognusion/imaging)
+[![Build Status](https://travis-ci.org/cognusion/imaging.svg?branch=master)](https://travis-ci.org/cognusion/imaging)
+[![Coverage Status](https://coveralls.io/repos/github/cognusion/imaging/badge.svg?branch=master&service=github)](https://coveralls.io/github/cognusion/imaging?branch=master)
+[![Go Report Card](https://goreportcard.com/badge/github.com/cognusion/imaging)](https://goreportcard.com/report/github.com/cognusion/imaging)
 
 Package imaging provides basic image processing functions (resize, rotate, crop, brightness/contrast adjustments, etc.).
 
 All the image processing functions provided by the package accept any image type that implements `image.Image` interface
 as an input, and return a new image of `*image.NRGBA` type (32bit RGBA colors, non-premultiplied alpha).
 
+Originally https://github.com/disintegration/imaging however that repo appears abandoned.
+
 ## Installation
 
-    go get -u github.com/disintegration/imaging
+    go get -u github.com/cognusion/imaging
 
 ## Documentation
 
-https://pkg.go.dev/github.com/disintegration/imaging
+https://pkg.go.dev/github.com/cognusion/imaging
 
 ## Usage examples
 
@@ -156,13 +158,13 @@ img, err := imaging.Open("test.jpg", imaging.AutoOrientation(true))
 
 ### What's the difference between `imaging` and `gift` packages?
 
-[imaging](https://github.com/disintegration/imaging)
+[imaging](https://github.com/cognusion/imaging)
 is designed to be a lightweight and simple image manipulation package.
 It provides basic image processing functions and a few helper functions
 such as `Open` and `Save`. It consistently returns *image.NRGBA image 
 type (8 bits per channel, RGBA).
 
-[gift](https://github.com/disintegration/gift)
+[gift](https://github.com/cognusion/gift)
 supports more advanced image processing, for example, sRGB/Linear color
 space conversions. It also supports different output image types
 (e.g. 16 bits per channel) and provides easy-to-use API for chaining
@@ -178,7 +180,7 @@ import (
 	"image/color"
 	"log"
 
-	"github.com/disintegration/imaging"
+	"github.com/cognusion/imaging"
 )
 
 func main() {
